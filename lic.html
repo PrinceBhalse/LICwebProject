@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIC Agent Management System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS for additional styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-primary text-white text-center py-4">
+        <h1>LIC Agent Management System</h1>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#policies">Policies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#reports">Reports</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#documents">Documents</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tasks">Tasks</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="container my-5">
+        <h2>Dashboard</h2>
+        <p>Overview of your performance metrics and recent activities.</p>
+        <!-- Sample analytics metrics -->
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">New Policies</h3>
+                        <p class="card-text">12</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Pending Renewals</h3>
+                        <p class="card-text">5</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="card-title">Client Satisfaction</h3>
+                        <p class="card-text">90%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clients" class="container my-5">
+        <h2>Clients</h2>
+        <p>Manage your clients and their information.</p>
+        <form id="searchClients" class="form-inline mb-3">
+            <label class="sr-only" for="search">Search Clients:</label>
+            <input type="text" id="search" name="search" class="form-control mr-2" placeholder="Enter client name or policy number">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+        <!-- Sample client list -->
+        <ul class="list-group">
+            <li class="list-group-item">John Doe - Policy #123456</li>
+            <li class="list-group-item">Jane Smith - Policy #654321</li>
+        </ul>
+    </section>
+
+    <!-- Policies Section -->
+    <section id="policies" class="container my-5">
+        <h2>Policies</h2>
+        <p>Track and manage all policies.</p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Policy Number</th>
+                    <th>Client Name</th>
+                    <th>Status</th>
+                    <th>Renewal Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>123456</td>
+                    <td>John Doe</td>
+                    <td>Active</td>
+                    <td>2024-09-01</td>
+                </tr>
+                <tr>
+                    <td>654321</td>
+                    <td>Jane Smith</td>
+                    <td>Pending</td>
+                    <td>2024-11-15</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Reports Section -->
+    <section id="reports" class="container my-5">
+        <h2>Reports</h2>
+        <p>Generate and view custom reports on your activities.</p>
+        <button type="button" class="btn btn-primary">Generate Report</button>
+    </section>
+
+    <!-- Documents Section -->
+    <section id="documents" class="container my-5">
+        <h2>Documents</h2>
+        <p>Upload and manage your documents securely.</p>
+        <form id="uploadDocument" class="form-inline mb-3">
+            <label class="sr-only" for="file">Upload Document:</label>
+            <input type="file" id="file" name="file" class="form-control-file mr-2">
+            <button type="submit" class="btn btn-primary">Upload</button>
+        </form>
+        <!-- Sample document list -->
+        <ul class="list-group">
+            <li class="list-group-item">Policy_123456.pdf</li>
+            <li class="list-group-item">Client_John_Doe_ID.jpg</li>
+        </ul>
+    </section>
+
+    <!-- Tasks Section -->
+    <section id="tasks" class="container my-5">
+        <h2>Tasks</h2>
+        <p>Manage your tasks and reminders.</p>
+        <form id="addTask" class="form-inline mb-3">
+            <label class="sr-only" for="task">New Task:</label>
+            <input type="text" id="task" name="task" class="form-control mr-2" placeholder="Enter task description">
+            <button type="submit" class="btn btn-primary">Add Task</button>
+        </form>
+        <!-- Sample task list -->
+        <ul class="list-group">
+            <li class="list-group-item">Follow-up with John Doe - Due: 2024-09-05</li>
+            <li class="list-group-item">Review pending policies - Due: 2024-09-10</li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-primary text-white text-center py-4">
+        <p>&copy; 2024 LIC Agent Management System</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Include JavaScript file -->
+<script src="scripts.js"></script>
+
+</body>
+</html>
